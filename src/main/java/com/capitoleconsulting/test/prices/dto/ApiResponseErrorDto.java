@@ -1,4 +1,4 @@
-package com.pegasus.test.dto;
+package com.capitoleconsulting.test.prices.dto;
 
 import java.util.List;
 
