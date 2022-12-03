@@ -16,5 +16,5 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PriceRequest extends PriceDto {
-	private LocalDateTime currentDate;
+	private LocalDateTime now;
 }
