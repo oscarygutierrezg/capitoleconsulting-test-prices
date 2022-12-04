@@ -38,5 +38,7 @@ public class Price {
 	private LocalDateTime endDate;
 	@Column(name = "CURR")
 	private String curr;
+	@Column(name = "PRICE")
+	private double price;
 
 }
