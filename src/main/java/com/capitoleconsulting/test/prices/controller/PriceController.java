@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDateTime;
 
-@RequestMapping("/price")
 @Tag(name = "Price Controller", description = "Se encarga de manejar las tarifas.")
+@RequestMapping(value = "/v1/price")
 public interface PriceController {
 
     @GetMapping("/current")

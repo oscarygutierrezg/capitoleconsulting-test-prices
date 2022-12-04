@@ -39,6 +39,6 @@ public class Price {
 	@Column(name = "CURR")
 	private String curr;
 	@Column(name = "PRICE")
-	private double price;
+	private double amount;
 
 }

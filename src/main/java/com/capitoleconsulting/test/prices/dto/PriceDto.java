@@ -24,4 +24,5 @@ public class PriceDto {
 	private LocalDateTime startDate;
 	private LocalDateTime endDate;
 	private String curr;
+	private double amount;
 }
