@@ -18,8 +18,8 @@ import java.time.LocalDateTime;
 public class PriceDto {
 
 	private long priceList;
-	protected long productId;
-	protected long brandId;
+	private long productId;
+	private long brandId;
 	private long priority;
 	private LocalDateTime startDate;
 	private LocalDateTime endDate;

@@ -15,6 +15,8 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class PriceRequest extends PriceDto {
+public class PriceRequest {
 	private LocalDateTime now;
+	protected long productId;
+	protected long brandId;
 }
