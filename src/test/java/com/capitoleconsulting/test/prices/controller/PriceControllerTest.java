@@ -173,6 +173,40 @@ public class PriceControllerTest {
 				);
 	}
 
+	@Test
+	public void test_FinrCurrentPrice_Should_Return400_When_CallWith13T10_Invoked() throws JsonProcessingException, Exception {
+
+		mockMvc.perform(
+						MockMvcRequestBuilders.get("/v1/price/current?productId=-35455&brandId=1&now=2020-06-13T10:00:00")
+								.contentType(MediaType.APPLICATION_JSON)
+								.accept(MediaType.APPLICATION_JSON)
+
+				)
+				.andDo(MockMvcResultHandlers.print())
+				.andExpectAll(
+						MockMvcResultMatchers.status().isBadRequest()
+
+				);
+	}
+
+
+
+	@Test
+	public void test_FinrCurrentPrice_Should_Return500_When_CallWith13T10_Invoked() throws JsonProcessingException, Exception {
+
+		mockMvc.perform(
+						MockMvcRequestBuilders.get("/v1/price/current?productId=35455777777777777777777777&brandId=1&now=2020-06-13T10:00:00")
+								.contentType(MediaType.APPLICATION_JSON)
+								.accept(MediaType.APPLICATION_JSON)
+
+				)
+				.andDo(MockMvcResultHandlers.print())
+				.andExpectAll(
+						MockMvcResultMatchers.status().isInternalServerError()
+
+				);
+	}
+
 
 }
 

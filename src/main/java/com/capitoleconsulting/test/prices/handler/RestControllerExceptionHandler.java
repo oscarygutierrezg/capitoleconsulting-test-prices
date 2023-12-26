@@ -1,6 +1,7 @@
 package com.capitoleconsulting.test.prices.handler;
 
 import com.capitoleconsulting.test.prices.dto.ApiResponseErrorDto;
+import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -27,13 +28,13 @@ public class RestControllerExceptionHandler {
 
 	}
 
-	@ExceptionHandler(MethodArgumentNotValidException.class)
+	@ExceptionHandler(ConstraintViolationException.class)
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
-	public ResponseEntity<ApiResponseErrorDto> handleMethodArgumentNotValidException(MethodArgumentNotValidException exception){
+	public ResponseEntity<ApiResponseErrorDto> handleMethodArgumentNotValidException(ConstraintViolationException exception){
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST)
 				.body(
-						createApiResponseErrorDto(HttpStatus.BAD_REQUEST, exception.getBindingResult().getFieldErrors().stream()
-								.map( error -> error.getField()+" "+error.getDefaultMessage())
+						createApiResponseErrorDto(HttpStatus.BAD_REQUEST, exception.getConstraintViolations().stream()
+								.map( error -> error.getPropertyPath()+" "+error.getMessage())
 								.collect(Collectors.toList()))
 						);
 
