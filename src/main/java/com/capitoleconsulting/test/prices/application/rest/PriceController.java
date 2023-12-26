@@ -1,7 +1,7 @@
-package com.capitoleconsulting.test.prices.controller;
+package com.capitoleconsulting.test.prices.application.rest;
 
-import com.capitoleconsulting.test.prices.dto.ApiResponseErrorDto;
-import com.capitoleconsulting.test.prices.dto.PriceDto;
+import com.capitoleconsulting.test.prices.domain.dto.ApiResponseErrorDto;
+import com.capitoleconsulting.test.prices.domain.dto.PriceDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;

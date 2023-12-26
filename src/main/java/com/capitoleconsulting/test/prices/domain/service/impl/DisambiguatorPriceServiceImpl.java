@@ -1,10 +1,9 @@
-package com.capitoleconsulting.test.prices.service.impl;
+package com.capitoleconsulting.test.prices.domain.service.impl;
 
-import com.capitoleconsulting.test.prices.dto.PriceDto;
-import com.capitoleconsulting.test.prices.dto.PriceMapper;
-import com.capitoleconsulting.test.prices.model.Price;
-import com.capitoleconsulting.test.prices.service.DisambiguatorPriceService;
-import com.capitoleconsulting.test.prices.service.PriceService;
+import com.capitoleconsulting.test.prices.domain.dto.PriceDto;
+import com.capitoleconsulting.test.prices.domain.dto.PriceMapper;
+import com.capitoleconsulting.test.prices.domain.model.Price;
+import com.capitoleconsulting.test.prices.domain.service.DisambiguatorPriceUseCase;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +13,7 @@ import java.util.NoSuchElementException;
 
 @Service
 @AllArgsConstructor
-public class DisambiguatorPriceServiceImpl implements DisambiguatorPriceService {
+public class DisambiguatorPriceServiceImpl implements DisambiguatorPriceUseCase {
 
     private PriceMapper priceMapper;
 

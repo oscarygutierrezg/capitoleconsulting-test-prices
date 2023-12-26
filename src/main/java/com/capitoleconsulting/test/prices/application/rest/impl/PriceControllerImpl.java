@@ -1,9 +1,9 @@
-package com.capitoleconsulting.test.prices.controller.impl;
+package com.capitoleconsulting.test.prices.application.rest.impl;
 
-import com.capitoleconsulting.test.prices.controller.PriceController;
-import com.capitoleconsulting.test.prices.dto.PriceDto;
-import com.capitoleconsulting.test.prices.dto.PriceRequest;
-import com.capitoleconsulting.test.prices.service.PriceService;
+import com.capitoleconsulting.test.prices.application.rest.PriceController;
+import com.capitoleconsulting.test.prices.domain.dto.PriceDto;
+import com.capitoleconsulting.test.prices.domain.dto.PriceRequest;
+import com.capitoleconsulting.test.prices.domain.service.PriceServiceUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @RequiredArgsConstructor
 public class PriceControllerImpl implements PriceController {
 
-    private final PriceService priceService;
+    private final PriceServiceUseCase priceService;
 
     @Override
     public ResponseEntity<PriceDto> finrCurrentPrice(Long productId, Long brandId, LocalDateTime now) {

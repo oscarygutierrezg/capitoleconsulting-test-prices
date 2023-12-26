@@ -1,7 +1,7 @@
 package com.capitoleconsulting.test.prices.controller;
 
 import com.capitoleconsulting.test.prices.PricesApplication;
-import com.capitoleconsulting.test.prices.dto.PriceDto;
+import com.capitoleconsulting.test.prices.domain.dto.PriceDto;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;

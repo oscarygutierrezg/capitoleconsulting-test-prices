@@ -1,4 +1,4 @@
-package com.capitoleconsulting.test.prices.dto;
+package com.capitoleconsulting.test.prices.domain.dto;
 
 import java.util.List;
 

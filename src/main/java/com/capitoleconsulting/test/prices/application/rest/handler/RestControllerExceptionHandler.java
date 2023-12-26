@@ -1,10 +1,9 @@
-package com.capitoleconsulting.test.prices.handler;
+package com.capitoleconsulting.test.prices.application.rest.handler;
 
-import com.capitoleconsulting.test.prices.dto.ApiResponseErrorDto;
+import com.capitoleconsulting.test.prices.domain.dto.ApiResponseErrorDto;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;

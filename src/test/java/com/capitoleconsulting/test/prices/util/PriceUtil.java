@@ -1,7 +1,7 @@
 package com.capitoleconsulting.test.prices.util;
 
-import com.capitoleconsulting.test.prices.dto.PriceDto;
-import com.capitoleconsulting.test.prices.model.Price;
+import com.capitoleconsulting.test.prices.domain.dto.PriceDto;
+import com.capitoleconsulting.test.prices.domain.model.Price;
 import com.github.javafaker.Faker;
 
 import java.time.LocalDateTime;

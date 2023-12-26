@@ -1,9 +1,9 @@
-package com.capitoleconsulting.test.prices.service.impl;
+package com.capitoleconsulting.test.prices.domain.service.impl;
 
 
-import com.capitoleconsulting.test.prices.dto.PriceDto;
-import com.capitoleconsulting.test.prices.dto.PriceMapper;
-import com.capitoleconsulting.test.prices.model.Price;
+import com.capitoleconsulting.test.prices.domain.dto.PriceDto;
+import com.capitoleconsulting.test.prices.domain.dto.PriceMapper;
+import com.capitoleconsulting.test.prices.domain.model.Price;
 import com.capitoleconsulting.test.prices.util.PriceUtil;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -18,7 +18,7 @@ import java.util.NoSuchElementException;
 
 
 @ExtendWith(MockitoExtension.class)
-public class DisambiguatorPriceServiceImplTest {
+public class DisambiguatorPriceUseCaseImplTest {
 
 	@InjectMocks
 	private DisambiguatorPriceServiceImpl disambiguatorPriceService;

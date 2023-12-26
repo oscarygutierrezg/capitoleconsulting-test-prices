@@ -1,6 +1,6 @@
-package com.capitoleconsulting.test.prices.dto;
+package com.capitoleconsulting.test.prices.domain.dto;
 
-import com.capitoleconsulting.test.prices.model.Price;
+import com.capitoleconsulting.test.prices.domain.model.Price;
 import org.mapstruct.Mapper;
 import org.mapstruct.NullValueCheckStrategy;
 import org.mapstruct.NullValuePropertyMappingStrategy;
